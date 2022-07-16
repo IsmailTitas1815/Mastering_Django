@@ -34,7 +34,7 @@ SECRET_KEY = 'f%dk29k%3z7c1!&1587(2gv=@-xao^ko&0s=@sg8=fembuf)8a'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['www.wondershop.in', 'services.wondershop.in', '127.0.0.1', 'admin.wondershop.in']
+ALLOWED_HOSTS = ['*','localhost']
 
 
 # Application definition
@@ -93,7 +93,7 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'firstproject.urls'
 ROOT_HOSTCONF = 'firstproject.hosts'
 DEFAULT_HOST = 'www'
-PARENT_HOST = 'wondershop.in'
+PARENT_HOST = 'localhost'
 HOST_PORT = "8000"
 
 TEMPLATES = [
@@ -201,9 +201,9 @@ EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_USE_TLS = True
 EMAIL_HOST = "smtp.gmail.com"
 EMAIL_PORT = 587
-EMAIL_HOST_USER ='priyanshuguptacontact@gmail.com'
-EMAIL_HOST_PASSWORD = "112112"
-DEFAULT_FROM_EMAIL = 'Testing <priyanshuguptacontact@gmail.com>'
+EMAIL_HOST_USER ='ismailtitas1815@gmail.com'
+EMAIL_HOST_PASSWORD = ""
+DEFAULT_FROM_EMAIL = 'Testing <ismailtitas1815@gmail.com>'
 
 #PASSWORD_RESET_TIMEOUT_DAYS = "7"
 

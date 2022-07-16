@@ -141,7 +141,7 @@ class RegisterView(CreateView):
             user = CustomUser.objects.get(email = user_email)
             user.is_active = False
             user.save()
-            current_site = get_current_site(request)     #www.wondershop.in:8000  127.0.0.1:8000 
+            current_site = get_current_site(request)     #www.localhost.in:8000  127.0.0.1:8000 
             mail_subject = 'Activate your account.'
             message = render_to_string('firstapp/registration/acc_active_email.html', {
                 'user': user,
@@ -223,7 +223,7 @@ from django.db.models import Q
 PRODUCTS_PER_PAGE = 2
 def listProducts(request):
     
-    ordering = request.GET.get('ordering', "")     # http://www.wondershop.in:8000/listproducts/?page=1&ordering=price
+    ordering = request.GET.get('ordering', "")     # http://www.localhost.in:8000/listproducts/?page=1&ordering=price
     search = request.GET.get('search', "")
     price = request.GET.get('price', "")
 

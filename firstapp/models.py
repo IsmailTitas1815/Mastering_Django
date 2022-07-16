@@ -69,8 +69,8 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
     #usertype = models.ManyToManyField(UserType)
 
     class Types(models.TextChoices):
-        SELLER = "Seller", "SELLER"
         CUSTOMER = "Customer", "CUSTOMER"
+        SELLER = "Seller", "SELLER"
     
     # Types = (
     #     (1, 'SELLER'),
@@ -81,7 +81,8 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
     default_type = Types.CUSTOMER
 
     #type = models.CharField(_('Type'), max_length=255, choices=Types.choices, default=default_type)
-    type = MultiSelectField(choices=Types.choices, default=[], null=True, blank=True)
+    type = MultiSelectField(choices=Types.choices,
+                            default=[default_type], null=True, blank=True)
 
 
 
