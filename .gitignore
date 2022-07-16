@@ -1,0 +1,16 @@
+.env
+
+# Django #
+*.log
+*.pot
+*.pyc
+__pycache__
+db.sqlite3
+
+**/migrations/**
+!**/migrations
+!**/migrations/__init__.py
+
+media
+static
+venv
